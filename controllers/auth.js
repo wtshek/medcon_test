@@ -18,7 +18,8 @@ const register = (req, res) => {
     `;
 
   connection.query(findUserSQL, (err, result) => {
-    if (result.length !== 0) return res.send("Account already exists");
+    if (result.length !== 0)
+      return res.status(300).send("Account already exists");
 
     connection.query(insertSQL, (err, result) => {
       if (err) return res.status(400).send(err);
@@ -50,6 +51,8 @@ const login = (req, res) => {
       });
 
       res.status(200).send({ accessToke: token, id: result[0].id, expiresIn });
+    } else {
+      res.status(401).send("Email and password do not match.");
     }
   });
 };

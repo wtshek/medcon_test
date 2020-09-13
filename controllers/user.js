@@ -100,8 +100,10 @@ const addBooking = (req, res) => {
 function getFunc(req, res, table) {
   const id = req.params.id;
   const sql = `
-      SELECT * FROM ${table}
-      WHERE clinic_id="${id}"
+      SELECT ${table}.*, clinics.clinic_name 
+      FROM ${table}
+      JOIN clinics
+      ON clinic_id=clinics.id
     `;
 
   connection.query(sql, (err, result) => {
