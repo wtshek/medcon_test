@@ -64,7 +64,7 @@
 - Header:
   -x-access-token
 - Required Info: 
-  - d_fname<String>, d_lname<String>, p_fname<String>, p_lname<String>, t_from<String>(format YYYY/mm/dd h:m:s), t_to<String>(format YYYY/mm/dd h:m:s)
+  - d_fname<String>, d_lname<String>, p_fname<String>, p_lname<String>, t_from<String>(format YYYY/mm/dd h`:`m`:`s), t_to<String>(format YYYY/mm/dd h`:`m`:`s)
 - Success Respond
   - status: 200
   - msg Information is updated
