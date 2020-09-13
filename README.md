@@ -13,7 +13,7 @@
   - msg: Account already exists.
   <hr />
   
-  ### Clinic Login
+ ### Clinic Login
 - URL
   - POST /auth/login
 - Required Info: 
@@ -27,7 +27,7 @@
   
   <hr />
   
-   ### Clinic Add Doctor
+ ### Clinic Add Doctor
 - URL
   - POST /user/add-doctor/:id
 - Header:
@@ -43,7 +43,7 @@
   
   <hr />
   
-     ### Clinic Add Consultation
+ ### Clinic Add Consultation
 - URL
   - POST /user/add-consultation/:id
 - Header:
@@ -73,7 +73,7 @@
   
   <hr />
   
-  ### Get Clinics
+### Get Clinics
 - URL
   - GET /clinics
 - Success Respond
@@ -82,7 +82,7 @@
   
    <hr />
   
-  ### Get Consultations
+### Get Consultations
 - URL
   - GET /user/get-consultations/:id
 - Success Respond
@@ -97,3 +97,14 @@
 - Success Respond
   - status: 200
   - data<Array>: id<String>, d_fname<String>, d_lname<String>, p_fname<String>, p_lname<String>, , t_from<String>, t_to<String>, clinic_id<String>, clinic_name<String>
+
+<hr />
+
+## Building and Testing
+First, clone the this repo
+Second, change the variable in .env to your own data
+then run:
+```
+npm install
+npm run dev
+```
