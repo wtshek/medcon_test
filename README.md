@@ -1,4 +1,4 @@
-# medcon_test
+# test
 
 ### Clinic Registration
 - URL
